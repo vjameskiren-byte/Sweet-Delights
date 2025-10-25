@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sweet Delights' Contact</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/023/816/972/original/cake-slice-icon-png.png"
+        type="image/x-icon">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+      <!--Header and Nav Content-->
+      <header>
+          <div class="logo-container">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Sweet Delights logo" width="150"></a>
+          </div>
+            <ul class="navbar">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="menu.html">Menu</a></li>
+             <li><a class="nav-link" href="catering.html">Catering</a></li>
+             <li><a class="nav-link" href="about.html">About</a></li>
+             <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="h-icons">
+                <a href="menu.html"><i class='bx bx-search-alt-2'></i></a> 
+                <a href="profile.html" id="user-icon">
+                  <!-- This will display the profile picture after login -->
+                  <img id="profile-picture-icon" src="" alt="Profile" style="display: none; width: 50px; height: 50px; border-radius: 50%;"/>
+                  <!-- Default user icon before login -->
+                  <i class='bx bxs-user-circle' id="default-icon" style="font-size: 50px;"></i>
+              </a>
+                <!--<a href="login.html"><i class='bx bxs-user-circle'></i></a>-->
+              </div>
+      </header>
+
+      <!--Contact Form -->
+      <div class="container" id="container">
+        <h1><span>Contact</span> Us</h1>
+        <p>Do you have a question, comment, or suggestion? We're here to help! Reach out to us using the form below, and we'll get back to you as soon as possible.</p>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send your message</h3>
+                <form name="contact" id="contact">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Full Name
+                                <input id= "fullName" type="text" placeholder="Enter your Full Name" autocomplete="name" required>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label>Phone
+                                <input id= "phone" type="tel" placeholder="+639 23 456 7891" autocomplete="tel" required></label>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email
+                                <input id= "email" type="email" placeholder="example@example.com" autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label>Subject
+                                <input id="subject" type="text" placeholder="Order Status / Catering Status" autocomplete="off" required>
+                            </label>
+                        </div>
+                    </div>
+                    <label>Message
+                        <textarea id= "message" rows="5" placeholder="Your Message" autocomplete="off"></textarea>
+                    </label>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Reach Us</h3>
+                <table>
+                    <tr>
+                        <td><i class='bx bxs-envelope'></i>Email</td>
+                        <td>sweetdelights@pastry.com</td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-phone' ></i>Phone</td>
+                        <td>+639 67 899 3132</td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bx-current-location'></i>Address</td>
+                        <td>Leon Kilat Street Cebu City, Cebu, 6000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+
+<!--Footer Content-->
+<section class="footer">
+  <div class="footer-content">
+      <img src="images/logo.png" alt="Logo">
+      <p>Sweet Delights is a pastry website that offers a delightful range of pastries and baked goods. From decadent cakes to flaky croissants, they provide a variety of sweet treats to satisfy every craving.</p>
+
+      <p class="bold"><span>&copy;2024.</span> All rights Reserved.</p>
+      <div class="icons">
+        <a href="https://www.facebook.com/profile.php?id=100008930135612"><i class='bx bxl-facebook-circle' ></i></a>
+        <a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt' ></i></a>
+        <a href="https://www.youtube.com/channel/UCbN3PiD8nvIrf0A617jFkug"><i class='bx bxl-youtube' ></i></a>
+        <a href="https://x.com/?lang=en"><i class='bx bxl-twitter'></i></a>
+      </div>
+  </div>
+
+  <div class="footer-content">
+      <h4>Services</h4>
+      <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="catering.html">Catering</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">Membership</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-content">
+      <h4>Our Partners</h4>
+    <ul>   
+      <li><a href="https://www.pandaexpress.com.ph/">Panda Express</a></li>
+      <li><a href="https://taximaxim.com/ph/en/7513-cebu/order-a-taxi-online">Maxim</a></li>
+      <li><a href="https://food.grab.com/ph/en/">Grab Food</a></li>
+      <li><a href="https://www.foodpanda.ph/city/cebu-city-cebu">Food Panda</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-content">
+      <h4>Resources</h4>
+      <ul>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms and Conditions</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+    </ul>
+  </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const loggedIn = localStorage.getItem("loggedIn");
+        const user = JSON.parse(localStorage.getItem("user"));
+        const userIcon = document.getElementById("user-icon");
+        const profilePictureIcon = document.getElementById("profile-picture-icon");
+        const defaultIcon = document.getElementById("default-icon");
+
+        if (loggedIn && user) {
+            // If logged in, display the user's profile picture and hide the default icon
+            profilePictureIcon.src = user.picture;
+            profilePictureIcon.style.display = "inline";
+            defaultIcon.style.display = "none"; 
+        } else {
+            // If not logged in, use the default icon
+            userIcon.href = "login.html";  // Redirect user to login when they click the icon
+        }
+    });
+</script>
+</section>    
+</body>
+</html>

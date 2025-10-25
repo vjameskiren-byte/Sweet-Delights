@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+</head>
+<body>
+    <h2>All User Accounts</h2>
+    <div id="all-accounts"></div>
+
+    <button id="go-back">Go Back</button>
+    <button id="logout" style="display:none;">Log Out</button>
+    <button id="delete-all-accounts">Delete All Accounts</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+            const allAccountsDiv = document.getElementById("all-accounts");
+
+            if (accounts.length > 0) {
+                accounts.forEach(account => {
+                    const accountDiv = document.createElement("div");
+                    accountDiv.innerHTML = `
+                        <img src="${account.picture}" alt="Profile Picture" width="100">
+                        <p>Username: ${account.username}</p>
+                        <p>Email: ${account.email}</p>
+                        <p>Password: ${account.password}</p>
+                        <hr>
+                    `;
+                    allAccountsDiv.appendChild(accountDiv);
+                });
+            } else {
+                allAccountsDiv.innerText = "No accounts available.";
+            }
+
+            // Go back functionality
+            document.getElementById("go-back").addEventListener("click", function() {
+                window.location.href = "index.html";  // Redirect back to the index page
+            });
+
+            // Delete all accounts functionality
+            document.getElementById("delete-all-accounts").addEventListener("click", function() {
+                const confirmation = confirm("Are you sure you want to delete all accounts?");
+                if (confirmation) {
+                    localStorage.removeItem("accounts");
+                    alert("All accounts have been deleted.");
+                    window.location.reload();  // Reload the settings page to show the updated state
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div id="profile-info">
+        <img id="profile-picture" alt="Profile Picture" width="100">
+        <p id="profile-username"></p>
+        <p id="profile-email"></p>
+        <button id="go-back">Go Back</button>
+        <button id="logout">Log Out</button>
+        <button id="delete-account">Delete Account</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const user = JSON.parse(localStorage.getItem("user"));
+            const loggedIn = localStorage.getItem("loggedIn");
+
+            if (!loggedIn) {
+                window.location.href = "login.html";  // Redirect to login if not logged in
+            } else {
+                // Populate user data
+                document.getElementById("profile-picture").src = user.picture;
+                document.getElementById("profile-username").innerText = `Username: ${user.username}`;
+                document.getElementById("profile-email").innerText = `Email: ${user.email}`;
+            }
+
+            // Go back functionality
+            document.getElementById("go-back").addEventListener("click", function() {
+                window.location.href = "index.html";  // Redirect back to the index page
+            });
+
+            // Log out functionality
+            document.getElementById("logout").addEventListener("click", function() {
+                localStorage.removeItem("loggedIn");
+                window.location.href = "login.html";  // Redirect to login page
+            });
+
+            // Delete account functionality
+            document.getElementById("delete-account").addEventListener("click", function() {
+                localStorage.removeItem("user");
+                localStorage.removeItem("loggedIn");
+                window.location.href = "login.html";  // Redirect to login page
+            });
+        });
+    </script>
+</body>
+</html>

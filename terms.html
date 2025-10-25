@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights' Terms</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/023/816/972/original/cake-slice-icon-png.png"
+    type="image/x-icon">
+    <link href="css/terms.css" rel="stylesheet">
+</head>
+<body>
+    <div class="terms-box">
+        <div class="terms-text">
+            <h2>Terms and Conditions</h2>
+            <p class="bold">Last Updated: May 18, 2024</p>
+            <p class="greet">Greetings Pastry Lovers!</p>
+            <p>Welcome to Sweet Delights! By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please review them carefully. If you do not agree to these terms, you should not use our website.</p>
+            <dl>
+                <dt>Acceptance of Terms</dt>
+                <dd>By accessing and using the Sweet Delights website, you accept and agree to be bound by these Terms and Conditions and our Privacy Policy. These terms apply to all visitors, users, and others who access or use the website.</dd>
+
+                <dt>Products and Services</dt>
+                <dd>Sweet Delights offers a variety of baked goods and catering services. We reserve the right to modify or discontinue any products or services at any time without prior notice. All descriptions of products or product pricing are subject to change at any time without notice at our sole discretion.</dd>
+
+                <dt>Orders and Payments</dt>
+                <dd>All orders placed through our website are subject to acceptance by Sweet Delights. We may require additional information or verification before accepting an order. By placing an order, you agree to provide current, complete, and accurate purchase and account information. Payments must be made in full at the time of ordering.</dd>
+
+                <dt>Shipping and Delivery</dt>
+                <dd>We offer delivery services for our products within specified areas. Delivery times and fees will be provided at the time of order. While we strive to meet all delivery timelines, we are not responsible for delays caused by factors beyond our control.</dd>
+
+                <dt>Returns and Refunds</dt>
+                <dd>Due to the perishable nature of our products, all sales are final. If you are not satisfied with your purchase, please contact us within 24 hours of receipt, and we will do our best to resolve the issue.</dd>
+            
+                <dt>Intellectual Property</dt>
+                <dd>The content, design, graphics, and other materials on our website are the intellectual property of Sweet Delights and are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or use any of our intellectual property without our prior written consent.</dd>
+
+                <dt>User Conduct</dt>
+                <dd>You agree to use our website only for lawful purposes. You may not use the website in any way that could damage, disable, overburden, or impair the site, or interfere with any other party's use and enjoyment of the website.</dd>
+
+                <dt>Changes to Terms</dt>
+                <dd>Sweet Delights reserves the right to modify these Terms and Conditions at any time. Any changes will be effective immediately upon posting on the website. Your continued use of the website after any such changes constitutes your acceptance of the new Terms and Conditions.</dd>
+            </dl>
+        </div>
+        <h4>I agree to the <span>Terms and Conditions</span></h4>
+        <div class="buttons">
+            <button class="btn red-btn" id="openModal">Accept</button>
+            <div class="modal" id="modal">
+                <div class="modal-inner">
+                <h2>Thank you!</h2>
+                <p>Thank you for taking the time to review and accept our Terms and Conditions. Your understanding and agreement help us ensure a smooth and enjoyable experience for all our customers. We are delighted to have you as part of the Sweet Delights community and look forward to bringing sweetness and joy to your life with our delicious treats. If you have any questions or need further assistance, please do not hesitate to contact us.</p>
+                
+                <button id="closeModal">Close</button>
+            </div>
+            </div>
+
+            <a href="index.html"></a>
+            <button id="close" class="btn gray-btn" onclick="gotoLink(this)" value="index.html">Decline</button>
+        </div>
+    </div>
+    <script>
+        function gotoLink(link){
+            console.log(link.value);
+            location.href = link.value;
+            window.open(link.value);
+        }
+        const openBtn = document.getElementById("openModal");
+        const GoBack = document.getElementById("close")
+        openBtn.addEventListener("click", () => {
+            Swal.fire({
+                title: "Thank You!",
+                text: "Thank you for taking the time to review and accept our Terms and Conditions.",
+                icon: "success"
+            }).then(() => {
+                window.location.href = "index.html";
+            });
+         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

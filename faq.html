@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights' FAQs</title>
+    <link rel="stylesheet" href="css/faq.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <a href="index.html"><img src="images/logo.png" alt="Sweet Delights' logo"></a>
+        <h1>Frequently Asked Questions <span>FAQS</span></h1>
+  
+        <div class="faq">
+          <button class="accordion">
+            Can I customize my order?
+            <i class='bx bx-chevron-down'></i>
+          </button>
+          <div class="pannel">
+            <p>
+                Yes! We offer customization options for many of our products, including cakes, cupcakes, and dessert platters. 
+                If you have specific preferences or dietary requirements, please let us know when placing your order, and we'll do our best to accommodate your requests.
+            </p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <button class="accordion">
+            Do you offer delivery services?
+            <i class='bx bx-chevron-down'></i>
+          </button>
+          <div class="pannel">
+            <p>
+                Yes, we offer delivery services within our specified delivery areas. 
+                Delivery fees may apply based on your location and order size. Please check our delivery information page for more details.
+            </p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <button class="accordion">
+            How far in advance should I place my order?
+            <i class='bx bx-chevron-down'></i>
+          </button>
+          <div class="pannel">
+            <p>
+                We recommend placing your order at least 48 hours in advance to ensure availability. 
+                However, we understand that last-minute cravings can arise, so feel free to contact us, and we'll do our best to accommodate your request.
+            </p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <button class="accordion">
+            What if I need to cancel or modify my order?
+            <i class='bx bx-chevron-down'></i>
+          </button>
+          <div class="pannel">
+            <p>
+                If you need to cancel or modify your order, please contact us as soon as possible. 
+                We'll do our best to accommodate your request, but please note that order modifications may be subject to availability and additional charges.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq">
+            <button class="accordion">
+            Do you offer refunds or exchanges?
+            <i class='bx bx-chevron-down'></i>
+            </button>
+            <div class="pannel">
+              <p>
+                Due to the perishable nature of our products, all sales are final. 
+                However, if you are not satisfied with your order, please contact us, and we'll do our best to resolve the issue.
+              </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="accordion">
+            Can I request a specific delivery time?
+            <i class='bx bx-chevron-down'></i>
+            </button>
+            <div class="pannel">
+              <p>
+                While we cannot guarantee specific delivery times, you can provide preferred delivery windows when placing your order. 
+                Our team will do their best to accommodate your request and ensure your order arrives within your preferred timeframe.
+              </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="accordion">
+            How should I store my pastries?
+            <i class='bx bx-chevron-down'></i>
+            </button>
+            <div class="pannel">
+              <p>
+                To maintain freshness, we recommend storing your pastries in a cool, dry place or refrigerating them as needed. 
+                Be sure to follow any specific storage instructions provided with your order.
+              </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="accordion">
+            How can I contact customer support?
+            <i class='bx bx-chevron-down'></i>
+            </button>
+            <div class="pannel">
+              <p>
+                If you have any further questions or need assistance, please don't hesitate to contact our customer support team. 
+                You can reach us via email at support@sweetdelights.com or by phone at +63 123 456 7890. Our team is available to assist you during our business hours.
+              </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+  
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            this.parentElement.classList.toggle("active");
+  
+            var pannel = this.nextElementSibling;
+  
+            if (pannel.style.display === "block") {
+              pannel.style.display = "none";
+            } else {
+              pannel.style.display = "block";
+            }
+          });
+        }
+      </script>
+</body>
+</html>
